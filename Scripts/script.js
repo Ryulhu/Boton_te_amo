@@ -23,21 +23,6 @@ const phrases = [
     document.getElementById("phrase").textContent = phrases[randomIndex];
   }
 
-  function createDecorations() {
-    const background = document.querySelector('.background');
-    const icons = ['★', '❤','✿'];
 
-    for (let i = 0; i < 200; i++) {
-      const icon = document.createElement('div');
-      icon.className = 'icon';
-      icon.textContent = icons[Math.floor(Math.random() * icons.length)];
-      icon.style.left = `${Math.random() * 100}vw`;
-      icon.style.top = `${Math.random() * 500}vh`;
-      icon.style.animationDuration = `${3 + Math.random() * 5}`;
-      icon.style.fontSize = `${15 + Math.random() * 25}px`;
-      icon.style.color = Math.random() > 0.5 ? '#3b83bd' : '#ff0080';
-      background.appendChild(icon);
-    }
-  }
 
   createDecorations();
